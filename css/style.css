@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+:root{
+--dark-mint-color:#2c4747;
+--mint-color:#519394;
+--text-large:20px;
+--text-medium:14px;
+--text-small:12px;
+--text-dark-gray:#434343
+}
+body{background:url('../img/Artboard.png') center center #e9f4f3;background-size:100%;background-repeat: no-repeat;background-position: center;background-attachment: fixed;font-family: 'Noto Sans KR', sans-serif;}
+#skip{width:150px;height:auto; position:fixed; top:-100%; z-index:99; background:#519394; padding:20px; border-radius:0 20px 20px 0}
+#skip a{display:block; margin:15px 0; color:#fff}
+#header, #aboutMe, #skills{width:100%; height:100vh;}
+h2{font-size:52px; color:var(--text-dark-gray); color:#434343; text-align: center; padding:120px 0 20px 0}
+/* header */
+#header{background:linear-gradient(to bottom,#d3dfde,#7fcacc); position:relative; overflow:hidden}
+/* nav */
+.nav{width:100%; height:60px; background:rgba(255,255,255,.6); position:absolute; z-index:1;}
+.nav ul.gnb{width:578px; height:33px; margin:13px auto; transition:all 0.5s}
+.nav ul.gnb li{float:left; margin-right:60px; font-size:var(--text-large); font-size:20px;}
+.nav ul.gnb li:hover a{color:#7fcacc}
+.nav ul.gnb li:last-child{margin-right:0}
+.m_navBtn{width:30px; height:20px; position:absolute; left:12px; top:14px; cursor:pointer; display:none; z-index:1; transition:all 0.5s}
+.m_navBtn.toggle{transition:all 0.5s}
+.btn_line1{width:20px; height:2px; position:absolute; top:0; left:0; background:var(--dark-mint-color); background:#2c4747; transition:all 0.5s}
+.btn_line1.toggle{width:25px; height:1px; top:5px; transform:rotate(45deg); transition:all 0.5s}
+.btn_line2{width:20px; height:2px; position:absolute; top:46%; left:0; background:var(--dark-mint-color); background:#2c4747;transition:all 0.5s}
+.btn_line2.toggle{display:none}
+.btn_line3{width:20px; height:2px; position:absolute; bottom:0; left:0; background:var(--dark-mint-color); background:#2c4747; transition:all 0.5s}
+.btn_line3.toggle{width:25px; height:1px; top:5px; transform:rotate(-45deg); transition:all 0.5s}
+.nav_scroll{width:100%; height:44px; background:#7fcacc; position:fixed; top:-46px; z-index:1; transition:top 0.3s;}
+.nav_scroll.visible{top:0}
+.nav_scroll ul.gnb{width:578px; height:33px; margin:5px auto; transition:all 0.5s}
+.nav_scroll ul.gnb li{float:left; margin-right:60px; font-size:var(--text-large); font-size:20px}
+.nav_scroll ul.gnb li a{color:#fff; text-shadow:5px 5px 5px rgba(0,0,0,.2)}
+.nav_scroll ul.gnb li:hover a{color:#353a3a}
+.nav_scroll ul.gnb li:last-child{margin-right:0}
+.obj1,.obj2,.obj3,.obj4{position:absolute;}
+.obj1{width:300px; height:300px; background:url('../img/object1.png') no-repeat center center; top:8%; left:12%; background-size:60%;animation:jump1 3s infinite;}
+.obj2{width:400px; height:400px; background:url('../img/object2.png') no-repeat center center; top:40%; left:10%; background-size:80%; animation:jump2 3s infinite;}
+.obj3{width:250px;height:250px;background:url('../img/object3.png') no-repeat center center;bottom:8%;left:60%;background-size:80%;animation:jump3 5s infinite;}
+.obj4{width:300px;height:300px;background:url('../img/object4.png') no-repeat center center;top:22%;right:5%;background-size:80%;animation:jump4 3s infinite;}
+#aboutMe .obj4{width:50px;left:60%;top:13px;animation:jump4 1s infinite;}
+@-webkit-keyframes jump1{
+0%{
+    top:6%
+}
+50%{
+    top:15%
+}
+100%{
+    top:6%
+}
+}
+@-webkit-keyframes jump2{
+0%{
+    top:40%;
+}
+50%{
+    top:37%
+}
+100%{
+    top:40%
+}
+}
+@-webkit-keyframes jump3{
+0%{
+    bottom:8%;
+    left:60%;
+    transform:rotate(0deg)
+}
+25%{
+    bottom:2%;
+    left:62%;
+    transform:rotate(40deg)
+}
+50%{
+    bottom:10%;
+    left:66%;
+    transform:rotate(120deg)
+}
+25%{
+    bottom:2%;
+    left:62%;
+    transform:rotate(20deg)
+}
+100%{
+    bottom:8%;
+    left:60%;
+    transform:rotate(0deg)
+}
+}
+@-webkit-keyframes jump4{
+0%{
+    transform:rotate(50deg)
+}
+50%{
+    transform:rotate(120deg)
+}
+100%{
+    transform:rotate(50deg)
+}
+}
+.title{width:386px;height:auto;position:absolute;top:45%;left:38%;text-align:center;color:var(--dark-mint-color);color:#2c4747}
+h1{font-size:55px;color:var(--dark-mint-color);color:#2c4747}
+.top_btn{width:50px;height:50px;position:fixed;bottom:0;right:0;z-index:2;}
+.top_btn button{width:100%;height:100%;background:url('../img/white_right.png') no-repeat center center;background-color:#519394;background-size:90%;border-radius:10px 0 0 0;cursor: pointer;}
+/* section aboutMe */
+#aboutMe{box-sizing: border-box;background:#fff;position:relative}
+.profile{width:100%;height:inherit;text-align:center;}
+.profile_wrap{width:62%;height:330px;margin:150px auto;}
+.profile_wrap p{font-size:0.8em}
+.profile_image{width:292px;height:292px;float:left;margin-right:30px;position:relative;z-index: 1;}
+.profile_image img{width:100%;box-shadow:15px 15px 0 #7fcacc;}
+.profile_text{width:120%;text-align:left}
+.profile_text p{margin-bottom:30px;font-size:var(--text-medium);font-size:14px;color:var(--text-dark-gray);color:#434343;}
+.profile_text ul li{color:var(--mint-color);color:#519394;margin-bottom:10px}
+/* section skills */
+#skills{height:100vh;background:rgba(127,202,204,.4);}
+.articles{-moz-width:100%;-webkit-width:100%;-webkit-display:flex;-moz-display:flex;-webkit-justify-content:space-between;-moz-justify-content:space-between;-webkit-margin:50px 0 0 0;-moz-margin:50px 0 0 0;width:82%;margin:50px auto 0 auto;}
+/*익스플로러*/
+#skills article{width:28%;height:620px;background:#fff;align-self:center;padding:33px 24px;box-sizing: border-box;float:left;margin-right:50px}
+#skills article{width:28%;height:620px;background:#fff;align-self:center;padding:33px 24px;box-sizing: border-box;transition: all .5s;}
+#skills article:hover{transform:translateY(-10px);box-shadow:10px 10px 10px rgba(0,0,0,.2);transition: all .5s;}
+#skills article:last-child{margin-right:0}
+.article_top{width:100%;height:206px;text-align:center;}
+.article_top img{width:80%}
+.skill_description li{margin-bottom:36px}
+.graph li{width:100%;height:20px;background:#555;margin-bottom:16px;position:relative}
+.graph div{position:absolute;z-index:1;}
+.graph li .bar{width:0;height:100%;background:linear-gradient(to right,#7fcacc,#edd9d5);font-size:var(--text-small);font-size:12px}
+.graph li .bar_name{width:100%;height:100%;position:absolute;top:-5px;left:4px;font-size:var(--text-medium);font-size:18px;}
+
+/* section portfolio */
+.notice{text-align: center;margin-bottom:55px}
+#portfolio h2{padding:50px 0}
+h3{font-size:33px;}
+.conR h3{    text-align:right}
+.conL,.conR{width:1400px;height:75vh;margin:0 auto;padding:180px 24px}
+.first_article{padding:50px 24px;}
+.conL .picture{position:relative;float:left}
+.conR .picture{position:relative;float:right}
+.conL .text,.conR .text,.conL .picture,.conR .picture{width:48%;height:inherit}
+.picture p{width:638px;height:486px}
+.picture p img{width:100%}
+.picture .inner{width:587px;height:330px;position:absolute;overflow: hidden;top:27px;left:26px;cursor: pointer;}
+.picture .inner img{width:100%;transition:all 1.5s}
+.picture.yamaha .inner:hover img{transform:translateY(-746px);transition:all 2.8s}
+.picture.sch .inner:hover img{transform:translateY(-522px);transition:all 2.8s}
+.picture.hotel .inner:hover img{transform:translateY(-482px);transition:all 2.8s}
+.picture.fresca .inner:hover img{transform:translateY(-428px);transition:all 2.8s}
+.conL .text{height:inherit;float:right}
+.conR .text{height:inherit;float:left}
+.conR h3{   float:left}
+.conR .tag{ float:left}
+.tag li{width:auto;float:left;border:2px solid #ff876f;border-radius:30px;margin:20px 2px;padding:4px 6px;color:#ff5635}
+.inner a img{width:100%}
+.description{width:100%;height:228px;padding:67px 54px;box-sizing: border-box;background:rgba(0,0,0,.6);position:relative;top:0;overflow:hidden;}
+.description p{color:#fff;}
+.description button{width:174px;height:42px;border:none;background:#fff;position:absolute;right:24px;bottom:24px;cursor: pointer;transition:all .5s}
+.description button:hover{  background:#7fcacc;   color:#fff;    box-shadow:0 10px 10px 0 #293f3f;   transform:translateY(-5px);    transition:all .5s}
+.picture.yp .inner,.picture.hana .inner{width: 260px;height: inherit;position:inherit;cursor: pointer;margin: -45px auto 0 auto;}
+/* section outro */
+#outro{width:100%;height:320px;position:relative}
+#outro .footer_bg{width:100%;height:100%;background:url('../img/outro.jpg') no-repeat center center;background-size:100%;}
+#outro p{position:absolute;top:42%;left:44%;text-align:center;color:#fff;font-size:var(--text-large);font-size:22px}
+@media screen and (max-width:1440px) {
+h3{font-size:30px}
+.conL,.conR{width:100%;box-sizing:border-box}
+.conL .text,.conR .text,.conL .picture,.conR .picture{width:48%}
+.conR .description{width:100%}
+.conL,.conR{width:95%;height:80vh;margin:0 auto;box-sizing:border-box;}
+.picture.yp .inner,.picture.hana .inner{width:200px;height:457px}
+.picture.yamaha .inner:hover img{transform:translateY(-826px);transition:all 2.8s}
+.picture.sch .inner:hover img{transform:translateY(-422px);transition:all 2.8s}
+.picture.hotel .inner:hover img{transform:translateY(-482px);transition:all 2.8s}
+.picture.fresca .inner:hover img{transform:translateY(-428px);transition:all 2.8s}
+@media screen and (max-width:1340px) {
+.conL,.conR{    width:100%}
+.picture p{width:576px}
+.picture .inner{width:531px;height:298px;top:23px;left:23px}
+}
+.picture.yamaha .inner:hover img{transform:translateY(-746px);transition:all 2.8s}
+.picture.sch .inner:hover img{transform:translateY(-522px);transition:all 2.8s}
+.picture.hotel .inner:hover img{transform:translateY(-432px);transition:all 2.8s}
+.picture.fresca .inner:hover img{transform:translateY(-388px);transition:all 2.8s}
+@media screen and (max-width:1286px) {
+.profile_wrap{width:80%}
+}
+@media screen and (max-width:1280px) {
+.article_top img{width:90%;line-height:30px}
+.skill_description li{font-size:0.9em;margin-bottom:20px}
+.graph li .bar_name{top:-2px}
+.conL .description,.conR .description{padding:36px 54px}
+}
+@media screen and (max-width:1160px) {
+h3{font-size:28px}
+.picture p{width:535px}
+.first_article .picture .inner{width:493px;height:277px;top:22px;left:22px}
+.picture .inner{width:494px;height:277px;top:22px;left:22px}
+#skills article{width:27%}}
+.picture.yamaha .inner:hover img{transform:translateY(-690px);transition:all 2.8s}
+.picture.sch .inner:hover img{transform:translateY(-446px);transition:all 2.8s}
+.picture.hotel .inner:hover img{transform:translateY(-405px);transition:all 2.8s}
+.picture.fresca .inner:hover img{transform:translateY(-362px);transition:all 2.8s}
+@media screen and (max-width:1024px) {
+.nav ul.gnb{width:534px}
+.nav ul.gnb li{margin-right:50px}
+.title{left:32%}
+.profile_wrap{width:95%}
+.profile_text{width:100%;font-size:0.8em}
+h2{padding:35px 0}
+.profile h2{padding:100px 0 20px 0}
+h3{padding:20px 0}
+.first_article .picture .inner{top:21px}
+.text>h3{padding:0;}
+.tag li{margin:10px 2px}
+.articles{width:88%}
+.graph li .bar_name{font-size:0.9em}
+.conL,.conR{height:106vh;padding:80px 24px 0 24px;box-sizing:border-box;}
+.conL .text,.conR .text,.conL .picture,.conR .picture{float:none;margin:0 auto}
+.conL .picture,.conR .picture{width:535px;height:407px}
+.conL .text,.conR .text{width:535px;height:378px;}
+.picture .inner{width:494px;height:278px;top:21px;left:21px}
+.picture p{height:407px}
+.conL .description,.conR .description{padding:36px 23px;height:172px}
+.description button {width: 100%;height: 40px;right: 0;bottom: 0;background:#78dbde;line-height:20px}
+.description button:hover{background:#519394;color:#fff;transform:translateY(0);}
+.picture.yp .inner,.picture.hana .inner{width:185px;height:390px;margin:0 auto}
+}
+@media screen and (max-width:897px){
+.articles{width:90%}
+#skills article{width:31%;margin-right:20px}
+}
+@media screen and (max-width:768px){
+h1{font-size:50px}
+h3{font-size:22px}
+.profile h2{padding:10px 0}
+.profile_wrap{margin:100px auto}
+.nav ul.gnb{width:264px;height:225px;margin-top:33px;margin:0;display:none;position:absolute;top:60px}
+.nav_scroll ul.gnb{margin-top:33px;display:none;position:absolute;top:43px}
+.nav ul.gnb li{width:232px;padding: 0 16px 16px 16px;background:rgba(255,255,255,.6);margin-right:0;}
+.nav_scroll ul.gnb{width:264px;height:235px;margin:0;display:none}
+.nav_scroll ul.gnb li{width:232px;padding: 0 16px 16px 16px;margin-top:-1px;background:#7fcacc;margin-right:0}
+.m_navBtn{display:block}
+.title{top:38%;left:26%;}
+.obj1{width:30%;height:30%;animation:unset}
+.obj2{width:40%;height:40%;animation:unset}
+.obj3{width:30%;height:30%;animation:unset}
+.obj4{width:50%;height:50%;animation:unset}
+#aboutMe{height:960px;padding:50px 16px;box-sizing: border-box}
+#aboutMe .obj4{animation:unset}
+.profile_wrap{width:100%;;}
+.profile_image{width:100%;height:315px;margin:0 0 30px 0}
+.profile_image img{width:300px;height:300px;}
+.profile_text{text-align:center}
+.profile_text ul{text-align:left;width: 70%;margin: 0 auto;}
+.articles{width:100%;flex-wrap:wrap;}
+#skills{height:1846px}
+#skills article{width:100%;height:542px;margin-bottom:15px}
+.article_top{height:220px}
+.article_top img{width:80%}
+.first_article{height:800px;}
+.first_article h2{height:40px}
+.first_article .picture .inner,.picture .inner{width: 525px;height: 295px;top: 23px;left:23px}
+.conL,.conR{width:100%;height:auto;padding:20px 24px;box-sizing:border-box;margin:0}
+.conL .picture,.conR .picture{width:570px;height:434px;margin:0 auto 20px auto}
+.conL .text,.conR .text{width:100%;height:255px;margin:0 0 20px 0}
+.conL .description,.conR .description{height:auto;padding:16px 16px 50px 16px;}
+.description p{font-size:0.9em}
+.first_article .picture p{height:170px}
+.picture p{width:100%;height:280px}
+.picture.yp .inner,.picture.hana .inner{width:196px;height:411px}
+.picture.yamaha .inner:hover img{transform:translateY(0);transition:0}
+.picture.sch .inner:hover img{transform:translateY(0);transition:0}
+.picture.hotel .inner:hover img{transform:translateY(0);transition:0}
+.picture.fresca .inner:hover img{transform:translateY(0);transition:0}
+#outro p{left:32%}
+}
+@media screen and (max-width:414px){
+h1{font-size:50px}
+h3{font-size:20px}
+.nav ul.gnb{width:232px;height:60px;margin-top:33px;margin:0;display:none;position:absolute;top:60px}
+.nav_scroll ul.gnb{margin-top:33px;display:none;position:absolute;top:43px}
+.nav ul.gnb li{width:100%;padding: 0 16px 16px 16px;background:rgba(255,255,255,.6);}
+.nav_scroll ul.gnb{width:232px;margin:0;display:none}
+.nav_scroll ul.gnb li{width:100%;padding: 0 16px 16px 16px;margin-top:-1px;background:#7fcacc;}
+.m_navBtn{display:block}
+.title{top:38%;left:3%;animation:unset}
+.obj1{width:30%;height:30%;animation:unset}
+.obj2{width:40%;height:40%;animation:unset}
+.obj3{width:30%;height:30%;animation:unset}
+.obj4{width:50%;height:50%;animation:unset}
+#aboutMe{height:1060px;padding:50px 16px;box-sizing: border-box}
+#aboutMe .obj4{animation:unset}.profile_wrap{width:100%;}
+.profile_image{width:100%;height:315px;margin:0 0 30px 0}
+.profile_image img{width:300px;height:300px;}
+.articles{width:100%;flex-wrap:wrap;}
+#skills{height:1846px}
+#skills article{width:100%;height:542px;margin-bottom:15px}
+.article_top{height:160px}
+.first_article{height:800px;}
+.first_article h2{height:40px}
+.first_article .picture .inner,.picture .inner{width:323px;height:181px;top:14px;left:14px}
+.conL,.conR{width:100%;height:auto;padding:20px 24px;box-sizing:border-box;margin:0}
+.conL .text,.conR .text,.conL .picture,.conR .picture{width:350px;height:251px;margin:0 auto 20px auto}
+.tag li{font-size:0.7em;border: 1px solid #ff876f;}
+.conL .description,.conR .description{padding:12px 12px 46px 12px;}
+.description p{font-size:0.8em}
+.first_article .picture p{height:170px}
+.picture p{width:100%;height:280px}
+#outro{height:190px}
+#outro p{top:58px;left:20%;font-size:18px}
+.picture.yp .inner,.picture.hana .inner{width:122px;height:262px}
+}
+@media screen and (max-width:375px) {
+.picture .inner {height: 170px;top: 13px;left: 13px;}
+.description p{font-size:0.8em}
+#outro{height:180px}
+#outro p{left:19%;top:52px;}
+}
+@media screen and (max-width:360px) {
+.title{left:-16px}
+.articles{margin:10px auto  0 auto}
+.conL .text,.conR .text,.conL .picture,.conR .picture{width:318px;height:244px}
+.first_article .picture .inner,.picture .inner{width:295px;height:166px;top:12px;left:12px}
+.tag li{margin:2px}
+}
